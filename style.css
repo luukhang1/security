@@ -44,7 +44,7 @@ body {
 }
 .footer{
     padding: 30px;
-    border-top: 1px solid #eaecf0;
+    border-top: 1px solid #afc6f3;
     text-align: center;
 }
 .breadcrumb{
@@ -108,7 +108,15 @@ a{
     box-shadow: 2px 2px 2px 2px;
     margin: 10px;
 }
-.info-cus th,td{
+.info-cus, th,td{
     text-align: left;
     color: #154398;
+}
+.kh-info{
+    background-color: #26509e;
+    margin: 10px;
+    color: #f8f8f8;
+}
+.table-cus, td{
+font-weight: bold;
 }
