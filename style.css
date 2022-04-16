@@ -59,7 +59,7 @@ body {
    margin: 15px;
 }
 .elec-info:hover{
-    background-image:linear-gradient(red, yellow);
+    background-image:linear-gradient(rgb(225, 0, 255), rgb(252, 14, 65));
 }
 .text-elec-info{
     color: red;
@@ -85,7 +85,7 @@ body {
     margin: 20px;
     padding-left: 20px;
     padding-right: 20px;
-    background-image:linear-gradient(red, yellow);
+    background-image:linear-gradient(rgb(225, 0, 255), rgb(252, 14, 65));;
 }
 .table-ca th, tr, td{
     border: none;
