@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Hệ thống điện Hà Nội</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <div class="container">
+
+        <div class="header">
+
+          <div class="row">
+              <div class="col-5">
+                <img _ngcontent-ng-cli-universal-c1="" alt="" src="assets/img/logo-small.svg">
+              </div>
+              <div class="col-7">
+
+                <nav class="nav justify-content-center|justify-content-end">
+                  <a class="nav-link active" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                    <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                  </svg></a>
+                  <a class="nav-link" href="registerE.html">Đăng Kí Điện</a>
+                  <a class="nav-link " href="caculatorE.html">Tính Tiền Điện</a>
+                  <a class="nav-link " href="pay.html">Đóng Tiền</a>
+                </nav>
+              </div>
+          </div>
+
+        </div>
+
+        <div class="carousel-class">
+
+            <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+              
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <img src="https://apicskh.evnhanoi.com.vn/media/BannerImage/YEXBUZWVEP.png" class="caroul-img" alt="First slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>EVNHANOI</h3>
+                            
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://apicskh.evnhanoi.com.vn/media/BannerImage/LTWPNAOYVN.png" class="caroul-img" alt="Second slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Xây Dựng Thủ Đô</h3>
+                           
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://apicskh.evnhanoi.com.vn/media/BannerImage/EMLPNFSFPB.png" class="caroul-img" alt="Third slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>EVNHANOI</h3>
+                           
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+            </div>
+          </div>
+      </div>
+
+    <!-- su kien chinh -->
+   
+    <div class="container">
+
+        <nav class="breadcrumb">
+            <a class="breadcrumb-item" href="index.html">Trang Chủ</a>
+            <span class="breadcrumb-item active">Thanh toán hóa đơn</span>
+        </nav>
+        <div style="border-bottom: 1px solid #d0d0d3 ; margin: 10px;">
+            <h4 style="color: darkslateblue;">Thanh toán trực tuyến</h4>
+
+        </div>
+        <div style="border-bottom: 1px solid #c3c3c4 ; margin: 10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+              </svg><a href="" data-bs-toggle="modal" data-bs-target="#modelId" style="color: darkslateblue; text-decoration: none;"> Click vào đây để xem hướng dẫn thanh toán tiền điện</a>
+
+        </div>
+
+        <div class="container" style="border: 1px solid black; width: 70%; background-color: #747478;">
+
+            <div class="justify-content-center pay-info " style="background-color: rgb(240, 242, 243); padding: 10px;" >
+                <div>
+                    <img src="assets/img/logo-small.svg" alt="">
+                    <div>
+                        <h4 style="text-align: center;">HÓA ĐƠN TIỀN ĐIỆN</h4>
+                        <p style="text-align: center;">Kì:1 Từ ngày: 01/04/2022 Đến ngày: 01/05/2022</p>
+                    </div>
+                </div>
+                
+                <table class="table info-cus">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row">Công ty điện lực Đống Đa</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Đia chỉ: 273 Tôn Đức Thắng</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Điện thoại: 09123456722</td>
+                            <td>MST: 2929929292 - VT</td>
+                            <td>ĐT sửa chữa: 091233333</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Tên khách hàng:</td>
+                           
+                        </tr>
+                        <tr>
+                            <td scope="row">Địa chỉ:</td>
+                           
+                        </tr>
+                        <tr>
+                            <td scope="row">Điện thoại:</td>
+                            <td>MST: 2929929292VT</td>
+                            <td>Số công tơ: 091233333</td>
+                            <td>Số hộ: 01</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Mã KH:</td>
+                            <td>Mã T.Toán: 2929929292VT</td>
+                            <td>Mã NN: 091233333</td>
+                            <td>Mã Tổ: 02</td>
+                        </tr>
+                      
+                    </tbody>
+                </table>
+                <table class="table table-striped table-inverse table-responsive">
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th>Bộ CS</th>
+                            <th>Chỉ Số Mới</th>
+                            <th>Chỉ Số Cũ</th>
+                            <th>HS Nhân</th>
+                            <th>ĐN Tiêu Thụ</th>
+                            <th>Đơn Giá</th>
+                            <th>Thành Tiền</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">KT</td>
+                                <td>1000</td>
+                                <td>2000</td>
+                                <td>1</td>
+                                <td>1000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td scope="row"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><pre>50</br>50</br>100</br>100</br>100</br>600</br></pre></td>
+                                <td><pre>83900</br>86700</br>201400</br>253600</br>283400</br>1700400</br></pre></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Cộng</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>1000</td>
+                                <td></td>
+                                <td>3515400</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Thuế suất GTGT: 8%</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>281232</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Tổng cộng tiền thanh toán:</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>3796632</td>
+                            </tr>
+                        </tbody>
+                </table>
+                
+                
+            </div>
+        </div>
+       
+
+    </div>
+    <!-- Button trigger modal -->
+
+    
+    <!-- Modal -->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true" >
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                    <div class="modal-header">
+                            <h5 class="modal-title">Thanh toán qua tổ chức trung gian thanh toán</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                <div class="modal-body">
+                   <div class="accordion" id="accordionExample">
+
+                     <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne">
+                           ECPAY
+                          </button>
+                        </h2>
+                        <div id="collapseOne1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+<pre>
+Khách hàng lựa chọn một trong các kênh thanh toán dưới đây:
+    Cách 1: Đăng ký trích nợ tự động qua 5 kênh tiếp nhận: Ví eDong, Tài khoản tiền điện, Tổng đài CSKH Ecpay 19001379, Các phòng giao dịch khách hàng của Ecpay, Website www.ecpay.vn.
+    Cách 2:Nộp tiền/chuyển khoản đến tài khoản chuyên thu của ECPay. Chi tiết truy cập Website: www.ecpay.vn.
+    Cách 3:Thanh toán qua ví điện tử eDong: Chi tiết truy cập Website: www.edong.vn.
+    Cách 4:Thanh toán tại các điểm thu của ECPay
+Trường hợp vướng mắc, đề nghị Quý khách hàng liên hệ Trung tâm Chăm sóc khách hàng EVN HANOI để được giải đáp (Hotline: 19001288).
+</pre>
+                          </div>
+                        </div>
+                        
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne">
+                            PAYOO
+                          </button>
+                        </h2>
+                        <div id="collapseOne2" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+<pre>
+Khách hàng lựa chọn một trong các kênh thanh toán dưới đây:
+
+    Cách 1: Thanh toán trực tuyến tại địa chỉ Website: https://bill.payoo.vn hoặc https://payoo.vn
+    Cách 2: Thanh toán qua mạng lưới điểm thanh toán hợp tác với Payoo trên toàn quốc: Tại chuỗi cửa hàng tiện ích: Circle K, K-Mart...; Cửa hàng công nghệ: thegiodidong, FPTShop,Phúc Anh, Viễn thông A...; Siêu thị điện máy: Nguyễn Kim, HC, Media Mart... Chi tiết điểm thanh toán truy cập Website: https://payoo.vn.
+    Cách 3: Thanh toán qua hệ thống các Ngân hàng hợp tác với Payoo: Vietcombank, ViettinBank, BIDV, MBBank, ACB, SHB… Chi tiết ngân hàng hợp tác với Payoo truy cập Website: https://payoo.vn.
+    Cách 4: Thanh toán qua ứng dụng thanh toán di động của Payoo: Payoo App
+    Cách 5: Kênh thanh toán khác trên: VNExpress, WebMoney, ZaloPay, SenPay, GrabPay…
+</pre>
+                          </div>
+                        </div>
+                        
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne3" aria-expanded="true" aria-controls="collapseOne">
+                            VIETTEL
+                          </button>
+                        </h2>
+                        <div id="collapseOne3" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+<pre>
+ Khách hàng lựa chọn một trong các kênh thanh toán dưới đây:
+
+    Cách 1: Đăng ký trích nợ tự động qua App ViettelPay hoặc qua thiết bị di động có cài App ViettelPay (bấm *998# và làm theo hướng dẫn).
+    Cách 2: Thanh toán tiền điện qua thiết bị di động: - Bước 1: Đăng ký Bankplus. Chi tiết truy cập Webite: https://vietteltelecom.vn/ - Bước 2: Từ điện thoại Gọi *123#, Chọn “thanh toán dịch vụ”, Chọn “Điện”, Nhập mã khách hàng PDxxxxxxxxxxx).Nhập mã PIN, Nhập mã xác thực và Kết thúc giao dịch.
+    Cách 3: Thanh toán qua các Quầy giao dịch, Cửa hàng trực tiếp, Đại lý thu hộ của Viettel như: Thế giới di động, Bách hóa xanh…
+    Cách 4: Thanh toán tiền điện qua App: ViettelPay trên điện thoại di động.
+</pre>
+                          </div>
+                        </div>
+                        
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne4" aria-expanded="true" aria-controls="collapseOne">
+                            MOMO
+                          </button>
+                        </h2>
+                        <div id="collapseOne4" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+<pre>
+Khách hàng lựa chọn một trong các kênh thanh toán dưới đây:
+
+    Cách 1: Thanh toán tiền điện qua App: MOMO mobile money trên điện thoại di động.
+    Cách 2: Thanh toán trực tuyến tại địa chỉ Website: www.momo.vn (Ứng dụng ví MoMo).
+    Cách 3: Thanh toán qua hệ thống các điểm thanh toán của MOMO.
+</pre>
+                          </div>
+                        </div>
+                        
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne5" aria-expanded="true" aria-controls="collapseOne">
+                            VNPAY
+                          </button>
+                        </h2>
+                        <div id="collapseOne5" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+<pre>
+Khách hàng lựa chọn một trong các kênh thanh toán dưới đây:
+
+    Cách 1: Thanh toán tiền điện qua các Ngân hàng hợp tác với VNPay. Chi tiết ngân hàng hợp tác với VNPay truy cập Website: vnpay.vn
+    Cách 2: Thanh toán trực tuyến tại địa chỉ Website: vnpay.vn
+    Cách 3: Thanh toán qua các Tổ chức cung ứng dịch vụ ví điện tử với VNPay: + Tổng công ty Truyền thông - VNPT Media (Ví điện tử VNPT Pay) + Công ty Cổ phần 1Pay (Ví điện tử TrueMoney và các điểm thu)
+</pre>
+                          </div>
+                        </div>
+                        
+                      </div>
+                     
+                   </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        var modelId = document.getElementById('modelId');
+    
+        modelId.addEventListener('show.bs.modal', function (event) {
+              // Button that triggered the modal
+              let button = event.relatedTarget;
+              // Extract info from data-bs-* attributes
+              let recipient = button.getAttribute('data-bs-whatever');
+    
+            // Use above variables to manipulate the DOM
+        });
+    </script>
+    
+      
+
+
+    <div class="container footer" style="margin-top: 20px;">
+       <p>© 2021 Bản quyền thuộc TỔNG CÔNG TY ĐIỆN LỰC TP.HÀ NỘI.</p>
+        <p>Số ĐKKD 0100101114 do Sở KHĐT Tp. Hà Nội cấp ngày 02/04/2010</p>
+
+    </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  
+    <script>
+        
+    $(document).ready(function(){
+
+        $('#name').keyup(function(){
+            let html = $('#name').val();
+            if(html ==''){
+                $('#nameVali').text('Không được để trống *');
+            }else {
+                $('#nameVali').text('');
+            }
+        });
+
+        $('#phone').keyup(function(){
+            let html = $('#phone').val();
+            if(html ==''){
+                $('#phoneVali').text('Không được để trống *');
+            } else if(html < 0){
+                $('#phoneVali').text('Số điện thoại không âm *');
+            }else {
+                $('#phoneVali').text('');
+            }
+        });
+
+        $('#email').keyup(function(){
+            let html = $('#email').val();
+            if(html ==''){
+                $('#emailVali').text('Không được để trống *');
+            }else {
+                $('#emailVali').text('');
+            }
+        });
+
+        
+        $('#provin').keyup(function(){
+            let html = $('#provin').val();
+            if(html ==''){
+                $('#provinVali').text('Không được để trống *');
+            }else {
+                $('#provinVali').text('');
+            }
+        });
+
+        $('#district').keyup(function(){
+            let html = $('#district').val();
+            if(html ==''){
+                $('#districtVali').text('Không được để trống *');
+            }else {
+                $('#districtVali').text('');
+            }
+        });
+      
+        $('#ward').keyup(function(){
+            let html = $('#ward').val();
+            if(html ==''){
+                $('#wardVali').text('Không được để trống *');
+            }else {
+                $('#wardVali').text('');
+            }
+        });
+
+        $('#residence').keyup(function(){
+            let html = $('#residence').val();
+            if(html ==''){
+                $('#residenceVali').text('Không được để trống *');
+            }else {
+                $('#residenceVali').text('');
+            }
+        });
+
+        $('#address').keyup(function(){
+            let html = $('#address').val();
+            if(html ==''){
+                $('#addressVali').text('Không được để trống *');
+            }else {
+                $('#addressVali').text('');
+            }
+        });
+
+        $('#cccd').keyup(function(){
+            let html = $('#cccd').val();
+            if(html ==''){
+                $('#cccdVali').text('Không được để trống *');
+            }else {
+                $('#cccdVali').text('');
+            }
+        });
+
+        $('#whereA').keyup(function(){
+            let html = $('#whereA').val();
+            if(html ==''){
+                $('#whereAVali').text('Không được để trống *');
+            }else {
+                $('#whereAVali').text('');
+            }
+        });
+
+
+        $('#sub').submit(function(e){
+            e.preventDefault();
+            let cf = window.confirm('ban co chăc muốn gửi');
+            if(cf== true){
+                $.ajax({
+                    type: "POST",
+                    url : "localhost/ngoc",
+                    data : $(this).serialize(),
+                    success: function(data)
+                    {
+                    alert(data); // show response from the php script.
+                    },
+                    error: function(data){
+                       console.log(data)
+                    }
+            })
+        }
+        });
+    });
+   
+    </script>
+</body>
+</html>

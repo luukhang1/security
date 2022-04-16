@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Hệ thống điện Hà Nội</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <div class="container">
+
+        <div class="header">
+
+          <div class="row">
+              <div class="col-5">
+                <img _ngcontent-ng-cli-universal-c1="" alt="" src="assets/img/logo-small.svg">
+              </div>
+              <div class="col-7">
+
+                <nav class="nav justify-content-center|justify-content-end">
+                  <a class="nav-link active" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                    <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                  </svg></a>
+                  <a class="nav-link" href="registerE.html">Đăng Kí Điện</a>
+                  <a class="nav-link " href="caculatorE.html">Tính Tiền Điện</a>
+                  <a class="nav-link " href="pay.html">Đóng Tiền</a>
+                </nav>
+              </div>
+          </div>
+
+        </div>
+
+        <div class="carousel-class">
+
+            <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+              
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <img src="https://apicskh.evnhanoi.com.vn/media/BannerImage/YEXBUZWVEP.png" class="caroul-img" alt="First slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>EVNHANOI</h3>
+                            
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://apicskh.evnhanoi.com.vn/media/BannerImage/LTWPNAOYVN.png" class="caroul-img" alt="Second slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Xây Dựng Thủ Đô</h3>
+                            
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://apicskh.evnhanoi.com.vn/media/BannerImage/EMLPNFSFPB.png" class="caroul-img" alt="Third slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>EVNHANOI</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+            </div>
+          </div>
+      </div>
+
+    <!-- su kien chinh -->
+    <div class="container ">
+        <nav class="breadcrumb">
+            <a class="breadcrumb-item" href="index.html">Trang Chủ</a>
+            <a class="breadcrumb-item" href="caculatorE.html">Tính tiền điện</a>
+            <span class="breadcrumb-item active">Công cụ tính tiền điện</span>
+        </nav>
+
+        <div style="margin: 20px;">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Công cụ tính hóa đơn tiền điện</button>
+              </li>
+              <!-- <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Messages</button>
+              </li> -->
+            </ul>
+            
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab"> 
+                  <div  class="container ">
+                      <div class=" justify-content-center">
+
+                        <div style=" border: 1px solid black; margin-left: 15%; margin-right: 15%;">
+
+                            <div id="cal">
+                            <div class="star">
+                                Nhập các thông số:
+                            </div>
+                            <div>
+                                <table class="table table-ca">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Từ ngày - đến ngày</td>
+                                            <td><input id="date1" type="date"></td>
+                                            <td><input id="date2" type="date"></td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Tổng điện năng tiêu thụ (kWh)</td>
+                                            <td><input type="number" id="numElec" style="border: none; border-bottom: 1px solid black;"></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Số hộ dùng điện (hộ)</td>
+                                            <td><input type="number" id="numH" style="border: none; border-bottom: 1px solid black;"></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"></td>
+                                            <td><button type="button" class="btn " id="ngoc" style="background-color: blue; color: aliceblue; "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                              </svg>   Tính toán</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                            </div>
+                            <div class="star">
+                                Kết quả:
+                            </div>
+                            <div>
+                                <table class="table table-ca">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>
+                                                <p>ĐƠN GIÁ THEO QĐ 648/QĐ-BCT</p>
+                                                <p>(đồng/kWh)</p>
+                                                 </th>
+                                            <th>
+                                                <p>SẢN LƯỢNG </p>
+                                                <p>(kWh)</p>
+                                            </th>
+                                            <th>
+                                                <p>THÀNH TIỀN </p>
+                                                <p>(đồng)</p>
+                                                 </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="cals">
+                                        <tr>
+                                            <td scope="row">Bậc thang 1</td>
+                                            <td>1678</td>
+                                            <td>50</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Bậc thang 2</td>
+                                            <td>1734</td>
+                                            <td>50</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Bậc thang 3</td>
+                                            <td>2014</td>
+                                            <td>100</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Bậc thang 4</td>
+                                            <td>2536</td>
+                                            <td>100</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Bậc thang 5</td>
+                                            <td>2834</td>
+                                            <td>100</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Bậc thang 6</td>
+                                            <td>2927</td>
+                                            <td>0</td>
+                                            <td></td>
+                                        </tr>
+                                      
+                                    </tbody>
+                                </table>
+                                
+                            </div>
+                            <div class="star">
+                                Thành tiền:
+                            </div>
+                            <div>
+                                <table class="table table-ca">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td scope="row">Tiền điện chưa thuế</td>
+                                            <td><input id="original" type="text" style="border: none; border-bottom: 1px solid black;" disabled ></td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Thuế GTGT (8%) tiền điện</td>
+                                            <td><input id="thue" type="text" style="border: none; border-bottom: 1px solid black;"  disabled></td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row" class="star">Tổng cộng tiền thanh toán (đồng)</td>
+                                            <td><input id="finally" type="text" style="border: none; border-bottom: 1px solid black;" disabled></td>
+                                        </tr>
+                                    </tbody>
+    
+                                </table>
+                                
+                            </div>
+                        </div>
+    
+        <pre>
+        Không áp dụng cho các trường hợp sau
+    
+        1. Khách hàng có thay đổi thiết bị đo đếm trong kỳ (Gắn mới, Thay thế, Tháo thu hồi)
+                                
+        2. Khách hàng có thay đổi giá bán điện áp dụng trong kỳ
+                                
+        3. Khách hàng có nhiều địa điểm dùng điện
+                                
+        4. Khách hàng lắp đo đếm phụ sau công tơ
+                                
+        5. Khách hàng sử dụng điện theo nhiều mục đích
+                                
+        6. Khách hàng có chốt chỉ số trong kỳ đổi giá điện
+        </pre>
+                        </div>
+                      </div>
+                    
+              
+                  </div>
+                
+            </div>
+              <!-- <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab"> profile </div>
+              <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab"> messages </div> -->
+            </div>
+        </div>
+
+    </div>
+
+      
+
+
+    <div class="container footer">
+       <p>© 2021 Bản quyền thuộc TỔNG CÔNG TY ĐIỆN LỰC TP.HÀ NỘI.</p>
+        <p>Số ĐKKD 0100101114 do Sở KHĐT Tp. Hà Nội cấp ngày 02/04/2010</p>
+
+    </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  
+    <script>
+        $(document).ready(function(){
+            $('#ngoc').click(function(){
+                let date1= $('#date1').val();
+                let date2 = $('#date2').val();
+                if(date1==""|| date2 ==""){
+                    $(cals).html('');
+                   
+                }
+                let numElec = $('#numElec').val();
+                let mumH = $('#numH').val();
+                date1 =date1.replaceAll('-','/');
+                date2 = date2.replaceAll('-','/');
+                let d1 = new Date(date1);
+                let d2 = new Date(date2);
+                if(d2-d1 < 0 || numElec == ""|| numElec <=0 || mumH <=0 || mumH =="" ){
+                    $(cals).html('');
+                    $(cals).append('');
+
+                } else {
+                   
+
+                let date = Math.abs(d2-d1);
+                let days = date/(1000 * 3600 * 24);
+                let sum =0;
+                if(numElec <=50){
+                  
+                    let dien = 1678*numElec*mumH;
+                    sum =dien;
+                    let html = "<tr><td>Bậc thang 1</td><td>1678</td><td>50</td><td>{hh}</td> </tr>";
+                    html = html.replace('{hh}',dien);
+                    $(cals).html(html);
+                } else if(numElec >50 && numElec <=100){
+
+                    let html1 = "<tr><td>Bậc thang 1</td><td>1678</td><td>50</td><td>{hh}</td> </tr>";
+                    let html2 = "<tr><td>Bậc thang 2</td><td>1734</td><td>50</td><td>{hh}</td> </tr>";
+                    html1 = html1.replace('{hh}',1678*50*mumH);
+                 //   alert(1734*(numElec-50)*numH);
+                    sum = 1678*50*mumH + 1734*(numElec-50)*mumH;
+                    html2 = html2.replace('{hh}',1734*(numElec-50)*mumH);
+                    $(cals).html(html1+html2);
+
+                } else if(numElec >100 && numElec <=200){
+                    let html1 = "<tr><td>Bậc thang 1</td><td>1678</td><td>50</td><td>{hh}</td> </tr>";
+                    let html2 = "<tr><td>Bậc thang 2</td><td>1734</td><td>50</td><td>{hh}</td> </tr>";
+                    let html3 = "<tr><td>Bậc thang 3</td><td>2014</td><td>100</td><td>{hh}</td> </tr>";
+                   // alert(1734*(numElec-50)*numH);
+                   html1 = html1.replace('{hh}',1678*50*mumH);
+                    sum = 1678*50*mumH + 1734*50*mumH + 2014*mumH*(numElec-100);
+                    html2 = html2.replace('{hh}',1734*50*mumH);
+                    html3 = html3.replace('{hh}',2014*(numElec-100)*mumH);
+                    $(cals).html(html1+html2+html3);
+                    //let html2 = "<tr><td>Bậc thang 1</td><td>1734</td><td>50</td><td>{hh}</td> </tr>";
+
+                }  else if(numElec >200 && numElec <=300){
+                    let html1 = "<tr><td>Bậc thang 1</td><td>1678</td><td>50</td><td>{hh}</td> </tr>";
+                    let html2 = "<tr><td>Bậc thang 2</td><td>1734</td><td>50</td><td>{hh}</td> </tr>";
+                    let html3 = "<tr><td>Bậc thang 3</td><td>2014</td><td>100</td><td>{hh}</td> </tr>";
+                    let html4 = "<tr><td>Bậc thang 4</td><td>2536</td><td>100</td><td>{hh}</td> </tr>";
+                   // alert(1734*(numElec-50)*numH);
+                   html1 = html1.replace('{hh}',1678*50*mumH);
+                    sum = 1678*50*mumH + 1734*50*mumH + 2014*mumH*100 + 2536*mumH*(numElec-200);
+                    html2 = html2.replace('{hh}',1734*50*mumH);
+                    html3 = html3.replace('{hh}',2014*100*mumH);
+                    html4 = html4.replace('{hh}',2014*(numElec-200)*mumH);
+                    $(cals).html(html1+html2+html3+html4);
+                    //let html2 = "<tr><td>Bậc thang 1</td><td>1734</td><td>50</td><td>{hh}</td> </tr>";
+
+                } else if(numElec >300 && numElec <=400){
+                    let html1 = "<tr><td>Bậc thang 1</td><td>1678</td><td>50</td><td>{hh}</td> </tr>";
+                    let html2 = "<tr><td>Bậc thang 2</td><td>1734</td><td>50</td><td>{hh}</td> </tr>";
+                    let html3 = "<tr><td>Bậc thang 3</td><td>2014</td><td>100</td><td>{hh}</td> </tr>";
+                    let html4 = "<tr><td>Bậc thang 4</td><td>2536</td><td>100</td><td>{hh}</td> </tr>";
+                    let html5 = "<tr><td>Bậc thang 5</td><td>2834</td><td>100</td><td>{hh}</td> </tr>";
+                   // alert(1734*(numElec-50)*numH);
+                   html1 = html1.replace('{hh}',1678*50*mumH);
+                    sum = 1678*50*mumH + 1734*50*mumH + 2014*mumH*100 + 2536*mumH*100+2834*mumH*(numElec-300);
+                    html2 = html2.replace('{hh}',1734*50*mumH);
+                    html3 = html3.replace('{hh}',2014*100*mumH);
+                    html4 = html4.replace('{hh}',2536*100*mumH);
+                    html5 = html5.replace('{hh}',2834*(numElec-300)*mumH);
+                    $(cals).html(html1+html2+html3+html4+html5);
+                    //let html2 = "<tr><td>Bậc thang 1</td><td>1734</td><td>50</td><td>{hh}</td> </tr>";
+
+                }
+                else if(numElec >400 ){
+                    let html1 = "<tr><td>Bậc thang 1</td><td>1678</td><td>50</td><td>{hh}</td> </tr>";
+                    let html2 = "<tr><td>Bậc thang 2</td><td>1734</td><td>50</td><td>{hh}</td> </tr>";
+                    let html3 = "<tr><td>Bậc thang 3</td><td>2014</td><td>100</td><td>{hh}</td> </tr>";
+                    let html4 = "<tr><td>Bậc thang 4</td><td>2536</td><td>100</td><td>{hh}</td> </tr>";
+                    let html5 = "<tr><td>Bậc thang 5</td><td>2834</td><td>100</td><td>{hh}</td> </tr>";
+                    let html6 = "<tr><td>Bậc thang 6</td><td>2927</td><td>0</td><td>{hh}</td> </tr>";
+                   // alert(1734*(numElec-50)*numH);
+                   html1 = html1.replace('{hh}',1678*50*mumH);
+                   sum = 1678*50*mumH + 1734*50*mumH + 2014*mumH*100 + 2536*mumH*100+2834*mumH*400 + 2927*mumH*(numElec-400);
+                    html2 = html2.replace('{hh}',1734*50*mumH);
+                    html3 = html3.replace('{hh}',2014*100*mumH);
+                    html4 = html4.replace('{hh}',2536*100*mumH);
+                    html5 = html5.replace('{hh}',2834*100*mumH);
+                    html6 = html6.replace('{hh}',2834*(numElec-400)*mumH);
+                    $(cals).html(html1+html2+html3+html4+html5+html6);
+                    //let html2 = "<tr><td>Bậc thang 1</td><td>1734</td><td>50</td><td>{hh}</td> </tr>";
+
+                }
+
+               
+                $('#original').val(sum);
+                $('#thue').val( Math.round(sum*8/100)) ;
+                $('#finally').val( sum +  Math.round(sum*8/100)) ;
+                alert("tính thành công");
+                }
+                
+               
+            })
+
+
+        })
+    </script>
+</body>
+</html>
