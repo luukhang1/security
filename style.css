@@ -60,6 +60,7 @@ body {
 }
 .elec-info:hover{
     background-image:linear-gradient(rgb(225, 0, 255), rgb(252, 14, 65));
+    color: white;
 }
 .text-elec-info{
     color: red;
@@ -119,4 +120,28 @@ a{
 }
 .table-cus, td{
 font-weight: bold;
+}
+.header-ngoc{
+    position: relative;
+}
+.login-box{
+    padding: 40px 20px;
+    box-shadow: 10px 0 30px 0 rgb(17 51 116 / 15%);
+    position: relative;
+    margin-top: -10px;
+    background: #fff;
+    margin-bottom: 10%;
+    z-index: 1000;
+    border-radius: 1%;
+}
+.btn-success{
+    margin-top: 10px;
+    background-image:linear-gradient(rgb(225, 0, 255), rgb(252, 14, 65));;
+}
+.register-link{
+    color: red;
+    text-decoration: none;
+}
+.tac{
+    margin: 10px;
 }
