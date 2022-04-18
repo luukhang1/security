@@ -20,7 +20,7 @@ function onSubmitSignUp(e){
     if(inputPassword > 0 && inputPassword.length < 8){
         passwordValidate.innerHTML = "Mật khẩu tối thiểu 8 kí tự"
     } else {
-        console.log("sign up")
+        location.replace("signIn.html")
     }
     
 }
