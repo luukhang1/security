@@ -59,8 +59,9 @@ body {
    margin: 15px;
 }
 .elec-info:hover{
-    background-image:linear-gradient(rgb(225, 0, 255), rgb(252, 14, 65));
+    background-image:linear-gradient(45deg, rgb(21, 67, 152) 0%, rgb(238, 29, 35) 100%);
     color: white;
+    border: none;
 }
 .text-elec-info{
     color: red;
@@ -84,9 +85,9 @@ body {
 .btn-primary{
     float: right;
     margin: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-image:linear-gradient(rgb(225, 0, 255), rgb(252, 14, 65));;
+    padding: 15px 40px;
+    background-image:linear-gradient(45deg, rgb(21, 67, 152) 0%, rgb(238, 29, 35) 100%);
+    border: none;
 }
 .table-ca th, tr, td{
     border: none;
@@ -136,7 +137,8 @@ font-weight: bold;
 }
 .btn-success{
     margin-top: 10px;
-    background-image:linear-gradient(rgb(225, 0, 255), rgb(252, 14, 65));;
+    background-image:linear-gradient(45deg, rgb(21, 67, 152) 0%, rgb(238, 29, 35) 100%);
+    border: none;
 }
 .register-link{
     color: red;
@@ -145,3 +147,11 @@ font-weight: bold;
 .tac{
     margin: 10px;
 }
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
