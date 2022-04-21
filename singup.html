@@ -64,10 +64,10 @@
                         </div>
 
                         <div >
-                            <label for="" class="form-label">Mã PD</label>
+                            <label for="" class="form-label">Email</label>
                             <input type="text"
-                              class="form-control" name="maKH" id="maKH" aria-describedby="helpId" placeholder="Mã PD là mã khách hàng trên hóa đơn">
-                              <span class="text-danger" id="maValidate"></span>
+                              class="form-control" name="emailKH" id="emailKH" aria-describedby="helpId" placeholder="Email của khách hàng">
+                              <span class="text-danger" id="emailValidate"></span>
                             </div>
     
                       <div >
@@ -97,69 +97,69 @@
   
     <script>
         
-        // $(document).ready(function(){
+        $(document).ready(function(){
 
     
-        //     $('#password').keyup(function(){
-        //         if($(this).val().trim()!=""){
-        //             $('#pasValidate').text('');
-        //         } else {
-        //             $('#pasValidate').text('Không được để trống');
-        //         }
-        //     });
+            $('#password').keyup(function(){
+                if($(this).val().trim()!=""){
+                    $('#pasValidate').text('');
+                } else {
+                    $('#pasValidate').text('Không được để trống');
+                }
+            });
 
             
-        //     $('#UserName').keyup(function(){
-        //         if($(this).val().trim()!=""){
-        //             $('#usnValidate').text('');
-        //         } else {
-        //             $('#usnValidate').text('Không được để trống');
-        //         }
-        //     });
+            $('#UserName').keyup(function(){
+                if($(this).val().trim()!=""){
+                    $('#usnValidate').text('');
+                } else {
+                    $('#usnValidate').text('Không được để trống');
+                }
+            });
 
               
-        //     $('#maKH').keyup(function(){
-        //         if($(this).val().trim()!=""){
-        //             $('#maValidate').text('');
-        //         } else {
-        //             $('#maValidate').text('Không được để trống');
-        //         }
-        //     });
+            $('#emailKH').keyup(function(){
+                if($(this).val().trim()!=""){
+                    $('#emailValidate').text('');
+                } else {
+                    $('#emailValidate').text('Không được để trống');
+                }
+            });
             
-        //     $('#signin').submit(function(e){
-        //         e.preventDefault();
-        //         let usn = $('#UserName').val();
-        //         let pas = $('#password').val();
-        //         let ma = $('#maKH').val()
-        //         if(usn.trim()=="" || pas.trim()=="" || ma.trim()==""){
-        //         if(usn.trim()==""){
-        //             $('#usnValidate').text('Không được để trống');
-        //         } if(pas.trim()==""){
-        //             $('#pasValidate').text('Không được để trống');
-        //         } if(ma.trim()==""){
-        //             $('#maValidate').text('Không được để trống');
-        //         }
-        //         } else {
-        //             $.ajax({
-        //             type: "POST",
-        //             url : "localhost:3000/ngoc",
-        //             data : $(this).serialize(),
-        //             success: function(data)
-        //             {
-        //             alert(data); // show response from the php script.
-        //             },
-        //             error: function(data){
-        //                console.log(data)
-        //             }
+            $('#signup').submit(function(e){
+                e.preventDefault();
+                let usn = $('#UserName').val();
+                let pas = $('#password').val();
+                let email = $('#emailKH').val()
+                if(usn.trim()=="" || pas.trim()=="" || ma.trim()==""){
+                if(usn.trim()==""){
+                    $('#usnValidate').text('Không được để trống');
+                } if(pas.trim()==""){
+                    $('#pasValidate').text('Không được để trống');
+                } if(email.trim()==""){
+                    $('#emailValidate').text('Không được để trống');
+                }
+                } else {
+                    $.ajax({
+                    type: "POST",
+                    url : "localhost:3000/api/auth/signup",
+                    data : $(this).serialize(),
+                    success: function(data)
+                    {
+                    alert(data); // show response from the php script.
+                    },
+                    error: function(data){
+                       console.log(data)
+                    }
 
-        //         })
+                })
                    
-        //     }
+            }
               
 
            
-        //     });
-        // })
+            });
+        })
     </script>
 
 
