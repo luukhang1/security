@@ -180,8 +180,8 @@
                           <div class="col-3">
                             <label for="" class="form-label">Số pha <span class="star">*</span></label>
                               <select class="form-control" name="pha" id="pha">
-                                <option>1</option>
-                                <option>3</option>
+                                <option id="option-1-pha">1</option>
+                                <option id="optiopn-3-pha">3</option>
                                 
                               </select>
                             </div>
@@ -236,31 +236,24 @@
         });
 
         
-        $('#provin').keyup(function(){
+        $('#provin').keydown(function(){
             let html = $('#provin').val();
-            if(html ==''){
-                $('#provinVali').text('Không được để trống *');
-            }else {
+        
                 $('#provinVali').text('');
-            }
+            
         });
 
-        $('#district').keyup(function(){
+        $('#district').keydown(function(){
             let html = $('#district').val();
-            if(html ==''){
-                $('#districtVali').text('Không được để trống *');
-            }else {
+            
                 $('#districtVali').text('');
-            }
+            
         });
       
-        $('#ward').keyup(function(){
-            let html = $('#ward').val();
-            if(html ==''){
-                $('#wardVali').text('Không được để trống *');
-            }else {
+        $('#ward').keydown(function(){
+            
                 $('#wardVali').text('');
-            }
+            
         });
 
         $('#residence').keydown(function(){

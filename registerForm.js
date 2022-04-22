@@ -24,9 +24,36 @@ function onSubmitForm(e){
     }
     else if(emailRegex.test(inputEmail)){
        console.log("email")
-    }else{
+    }
+    else{
         validateEmail.innerHTML = "Sai định dạng"
     }
+
+
+    var inputProvince = document.forms["form"]["provin"].value
+    var validateProvince = document.getElementById("provinVali")
+    if(inputProvince === ""){
+        validateProvince.innerHTML = "Không được để trống *"
+    } else{
+        console.log("address")
+    }
+
+    var inputDistrict = document.forms["form"]["district"].value
+    var validateDistrict = document.getElementById("districtVali")
+    if(inputDistrict === ""){
+        validateDistrict.innerHTML = "Không được để trống *"
+    } else{
+        console.log("address")
+    }
+
+    var inputWard = document.forms["form"]["ward"].value
+    var validateWard = document.getElementById("wardVali")
+    if(inputWard === ""){
+        validateWard.innerHTML = "Không được để trống *"
+    } else{
+        console.log("address")
+    }
+
 
     var inputPhone = document.forms["form"]["phone"].value
     var validatePhone = document.getElementById("phoneVali")
@@ -35,7 +62,8 @@ function onSubmitForm(e){
     }
     else if(inputPhone.match(/\d/g).length === 10){
        console.log("phone")
-    }else{
+    }
+    else{
         validatePhone.innerHTML = "Sai định dạng"
     }
  
@@ -65,7 +93,8 @@ function onSubmitForm(e){
     }
     else if(inputCmnd.match(/\d/g).length === 12){
        console.log("cmnd")
-    }else{
+    }
+    else{
         validateCmnd.innerHTML = "Sai định dạng"
     }
  
@@ -86,6 +115,38 @@ function onSubmitForm(e){
         validateWhereA.innerHTML = "Không được để trống *"
     } else{
         console.log("awhere A")
+    }
+
+
+
+    if(nameRegex.test(inputName) && emailRegex.test(inputEmail) && 
+        inputPhone.match(/\d/g).length === 10 && inputResidence !== "" && 
+        inputAddress === "" && inputCmnd.match(/\d/g).length === 12 &&
+        inputDate !== "" && inputWhereA === ""
+    ){
+        const article = {
+            fullName: inputName,
+            mobile: inputPhone,
+            email: inputEmail,
+            province: inputProvince,
+            district: inputDistrict,
+            ward: inputWard,
+            address: inputAddress,
+            electricAddress: inputResidence,
+            identityNumber: inputCmnd,
+            placeOfIssue: inputWhereA,
+            arrivalDate: inputDate,
+            phaseNumber: 1
+        }
+        axios.post('https://electric.ql6625.live/api/electric/register', article)
+            .then(response => {
+                // const acccessToken = response.data.accessToken
+                // console.log(acccessToken)
+                // localStorage.setItem('acccessToken', accessToken )
+                console.log(response.data)
+            })
+            
+            .catch((e) => alert("Tài khoản không tồn tại!"))
     }
 }
 

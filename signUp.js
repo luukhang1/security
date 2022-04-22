@@ -17,10 +17,15 @@ function onSubmitSignUp(e){
     if(inputemailKH === ""){
        emailValidate.innerHTML = "Không được để trống"
     }  
-    if(inputPassword > 0 && inputPassword.length < 8){
+    if(inputPassword > 0 && inputPassword.length < 8 ){
         passwordValidate.innerHTML = "Mật khẩu tối thiểu 8 kí tự"
     } else {
-        location.replace("signIn.html")
-    }
-    
+        const article = {username: inputUsername, password: inputPassword, email: inputemailKH };
+        axios.post('https://electric.ql6625.live/api/auth/signup', article)
+            .then(response => {
+                console.log(response)
+                location.replace("signIn.html")
+            })
+            .catch((e) => alert("Tên đăng nhập đã tồn tại!"))
+    }    
 }
