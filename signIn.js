@@ -18,12 +18,14 @@ function onSubmitSignIn(e){
         const article = {username: inputUsername, password: inputPassword };
         axios.post('https://electric.ql6625.live/api/auth/signin', article)
             .then(response => {
-                const acccessToken = response.data.accessToken
-                console.log(acccessToken)
-                localStorage.setItem('acccessToken', accessToken )
+                const accessToken = response.data.accessToken
+                console.log(accessToken)
+               
+                localStorage.setItem('accessToken', accessToken )
+                
             })
             .then(() => location.replace("payInfo.html"))
-            .catch((e) => alert("Tài khoản không tồn tại!"))
+            //.catch((e) => alert("Tài khoản không tồn tại!"))
     }
 }
 

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <script>
-    if(!localStorage.getItem('username')){
+    if(!localStorage.getItem('accessToken')){
       //alert(localStorage.getItem('accessToken'))
         location.replace('signIn.html');
     }
@@ -393,13 +393,13 @@ Khách hàng lựa chọn một trong các kênh thanh toán dưới đây:
     <script>
         
     $(document).ready(function(){
-        if(localStorage.getItem('username')){
+        if(localStorage.getItem('accessToken')){
             $('#dangnhap').text('Đăng xuất');
         }
         $('#dangnhap').click(function(){
 
             if($('#dangnhap').text()=="Đăng xuất"){
-                localStorage.removeItem('username');
+                localStorage.removeItem('accessToken');
             }
         })
         

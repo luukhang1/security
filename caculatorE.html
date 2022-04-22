@@ -411,5 +411,18 @@
 
         })
     </script>
+    <script>
+        $(document).ready(function () {
+            if (localStorage.getItem('accessToken')) {
+                $('#dangnhap').text('Đăng xuất');
+            }
+            $('#dangnhap').click(function () {
+
+                if ($('#dangnhap').text() == "Đăng xuất") {
+                    localStorage.removeItem('accessToken');
+                }
+            })
+        })
+    </script>
 </body>
 </html>
