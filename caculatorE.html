@@ -31,7 +31,7 @@
                   <a class="nav-link" href="registerForm.html">Đăng Kí Điện</a>
                   <a class="nav-link " href="caculatorE.html">Tính Tiền Điện</a>
                   <a class="nav-link " href="payInfo.html">Đóng Tiền</a>
-                  <a class="nav-link " href="signIn.html">Đăng Nhập</a>
+                  <a class="nav-link " href="signIn.html" id="dangnhap">Đăng Nhập</a>
                 </nav>
               </div>
           </div>
@@ -286,6 +286,15 @@
   
     <script>
         $(document).ready(function(){
+        if(localStorage.getItem('username')){
+            $('#dangnhap').text('Đăng xuất');
+        }
+        $('#dangnhap').click(function(){
+
+            if($('#dangnhap').text()=="Đăng xuất"){
+                localStorage.removeItem('username');
+            }
+        })
             $('#btn-calc').click(function(){
                 let date1= $('#date1').val();
                 let date2 = $('#date2').val();

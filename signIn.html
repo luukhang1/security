@@ -6,7 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <script src="./signIn.js"></script>
+    <!-- <script src="in.js"></script> -->
+    <!-- <script src="./signIn.js"></script> -->
     <!-- Bootstrap CSS v5.0.2 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -47,9 +48,10 @@
 
         <div class="row  justify-content-center">
             <div class="login-box col-5">
+              <span style="color: red;" id="toastr"></span>
 
                 <h5 style="color: darkslateblue; text-align: center;">Đăng nhập</h5>
-                <form action="" method="post" id="signin" name="form"  onsubmit="onSubmitSignIn(event)" >
+                <form action="" method="post" id="signin" name="form"   >
                   <!-- <form action="" method="post" id="sub" name="form" onsubmit=" onSubmitForm(event)"></form> -->
                     <div>
                       <label for="" class="form-label">Tên đăng nhập</label>
@@ -71,8 +73,7 @@
                         <p class="tac">Bạn chưa có tài khoản? <a class="register-link" href="singup.html">Đăng ký</a> ngay.</p>
                       </div>
     
-                      <span class="text-danger"></span>
-                      
+                      </form>
                </div>
         </div>
        
@@ -91,7 +92,7 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
         
-        $(document).ready(function(){
+     //   $(document).ready(function(){
 
     
             $('#password').keydown(function(){
@@ -103,37 +104,60 @@
               $('#usnValidate').text('');
             });
             
-            // $('#signin').submit(function(e){
-            //     e.preventDefault();
-            //     let usn = $('#UserName').val();
-            //     let pas = $('#password').val();
-            //     if(usn.trim()=="" || pas.trim()==""){
-            //     if(usn.trim()==""){
-            //         $('#usnValidate').text('Không được để trống');
-            //     } if(pas.trim()==""){
-            //         $('#pasValidate').text('Không được để trống');
-            //     }
-            //     } else {
-            //         $.ajax({
-            //         type: "POST",
-            //         url : "localhost:3000/ngoc",
-            //         data : $(this).serialize(),
-            //         success: function(data)
-            //         {
-            //         alert(data); // show response from the php script.
-            //         },
-            //         error: function(data){
-            //            console.log(data)
-            //         }
+            $('#signin').submit(function(e){
+                e.preventDefault();
+                let usn = $('#username').val();
+               // alert(usn);
+                let pas = $('#password').val();
+                if(usn.trim()=="" || pas.trim()==""){
+                if(usn.trim()==""){
+                    $('#usnValidate').text('Không được để trống');
+                } if(pas.trim()==""){
+                    $('#pasValidate').text('Không được để trống');
+                }
+                } else {
+                  
+                  var formData = {
+                      'username' : usn,
+                      "password" : pas
+                    }
+                 // alert(formData);
+                    $.ajax({
+                      type: "POST",
+                      data: JSON.stringify(formData),
+                      contentType : 'application/json; charset=utf-8',
+                      url: "https://electric.ql6625.live/api/auth/signin",
+                      //data: formData,
+                      dataType: 'json',
+                      // async: true,
+                   // data : String.raw(formData),
+                
+                    success: function(data)
+                    {
+                  
+                      localStorage.setItem('accessToken',data.accessToken);
+                      localStorage.setItem('username',data.username);
+                      window.history.go(-1);
+                     // Login.accessToken = data.accessToken;
+                    //  location.replace("payInfo.html")
+                 //   alert(localStorage.getItem('accessToken')); // show response from the php script.
+                    },
+                    error: function(data){
 
-            //     })
+                    //  alert(data)
+                      $('#toastr').text(data.responseJSON.message);
+                     // alert(data)
+                       console.log(data)
+                    }
+
+                })
                    
-            // }
+            }
               
 
            
-            //});
-        })
+            });
+      //  })
     </script>
 
 
