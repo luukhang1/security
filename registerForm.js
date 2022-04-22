@@ -121,9 +121,10 @@ function onSubmitForm(e){
 
     if(nameRegex.test(inputName) && emailRegex.test(inputEmail) && 
         inputPhone.match(/\d/g).length === 10 && inputResidence !== "" && 
-        inputAddress === "" && inputCmnd.match(/\d/g).length === 12 &&
-        inputDate !== "" && inputWhereA === ""
+        inputAddress !== "" && inputCmnd.match(/\d/g).length === 12 &&
+        inputDate !== "" && inputWhereA !== ""
     ){
+       
         const article = {
             fullName: inputName,
             mobile: inputPhone,
@@ -138,7 +139,12 @@ function onSubmitForm(e){
             arrivalDate: inputDate,
             phaseNumber: 1
         }
-        axios.post('https://electric.ql6625.live/api/electric/register', article)
+
+        const headers = {
+            'Content-Type': 'application/json',
+            'x-access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjUwNTU1NTkzLCJleHAiOjE2NTA2NDE5OTN9.FfTL_aPqeSj790fNB9K6MuSJYwpHzZlV3mr3wFKCFsM'
+        }
+        axios.post('https://electric.ql6625.live/api/electric/register', article, {headers})
             .then(response => {
                 // const acccessToken = response.data.accessToken
                 // console.log(acccessToken)

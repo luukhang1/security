@@ -1,6 +1,8 @@
+
+
 function onSubmitSignUp(e){
     e.preventDefault()
-    
+
     var inputUsername = document.forms["form"]["username"].value
     var inputPassword = document.forms["form"]["password"].value
     var inputemailKH = document.forms["form"]["emailKH"].value
@@ -26,6 +28,6 @@ function onSubmitSignUp(e){
                 console.log(response)
                 location.replace("signIn.html")
             })
-            .catch((e) => alert("Tên đăng nhập đã tồn tại!"))
+            .catch((e) => alert("Không thể đăng ký!"))
     }    
 }

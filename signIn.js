@@ -1,6 +1,7 @@
 function onSubmitSignIn(e){
     e.preventDefault()
-    
+  
+
     var inputUsername = document.forms["form"]["username"].value
     var inputPassword = document.forms["form"]["password"].value
     var usernameValidate = document.getElementById("usernameValidate")
@@ -25,7 +26,7 @@ function onSubmitSignIn(e){
                 
             })
             .then(() => location.replace("payInfo.html"))
-            //.catch((e) => alert("Tài khoản không tồn tại!"))
+            .catch((e) => alert("Không thể đăng nhập!"))
     }
 }
 
