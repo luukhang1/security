@@ -142,17 +142,15 @@ function onSubmitForm(e){
 
         const headers = {
             'Content-Type': 'application/json',
-            'x-access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjUwNTU1NTkzLCJleHAiOjE2NTA2NDE5OTN9.FfTL_aPqeSj790fNB9K6MuSJYwpHzZlV3mr3wFKCFsM'
+            'x-access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNjUwNjE3NjU1LCJleHAiOjE2NTA3MDQwNTV9.Z5dcqCN9DEYlsfBFlyilSR-shjLDqa8oe9ohyqg4HPw'
         }
         axios.post('https://electric.ql6625.live/api/electric/register', article, {headers})
             .then(response => {
-                // const acccessToken = response.data.accessToken
-                // console.log(acccessToken)
-                // localStorage.setItem('acccessToken', accessToken )
                 console.log(response.data)
+                location.replace("index.html")
             })
             
-            .catch((e) => alert("Tài khoản không tồn tại!"))
+            .catch((e) => alert("Đăng ký điện thất bại!"))
     }
 }
 
