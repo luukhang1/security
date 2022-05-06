@@ -117,6 +117,8 @@ function onSubmitForm(e){
         console.log("awhere A")
     }
 
+    var selectPha = document.getElementById("pha")
+    var optionPha = selectPha.options[selectPha.selectedIndex].text;
 
 
     if(nameRegex.test(inputName) && emailRegex.test(inputEmail) && 
@@ -137,7 +139,7 @@ function onSubmitForm(e){
             identityNumber: inputCmnd,
             placeOfIssue: inputWhereA,
             arrivalDate: inputDate,
-            phaseNumber: 1
+            phaseNumber: optionPha
         }
 
         const headers = {
