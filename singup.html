@@ -54,7 +54,7 @@
                     <div>
                       <label for="" class="form-label">Tên đăng nhập</label>
                       <input type="text"
-                        class="form-control" name="username" id="username" aria-describedby="helpId">
+                        class="form-control" name="username" id="username" autofocus="autofocus" aria-describedby="helpId">
                         <span class="text-danger" id="usernameValidate"></span>
                     </div>
                     <div >
@@ -104,18 +104,14 @@
     
             $('#password').keyup(function(){
                 if($(this).val().trim()!=""){
-                    $('#pasValidate').text('');
-                } else {
-                    $('#pasValidate').text('Không được để trống');
-                }
+                    $('#passwordValidate').text('');
+                } 
             });
 
             
-            $('#UserName').keyup(function(){
+            $('#username').keyup(function(){
                 if($(this).val().trim()!=""){
-                    $('#usnValidate').text('');
-                } else {
-                    $('#usnValidate').text('Không được để trống');
+                    $('#usernameValidate').text('');
                 }
             });
 

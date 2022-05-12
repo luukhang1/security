@@ -56,7 +56,7 @@
                     <div>
                       <label for="" class="form-label">Tên đăng nhập</label>
                       <input type="text"
-                        class="form-control" name="username" id="username" aria-describedby="helpId">
+                        class="form-control" name="username"  autofocus="autofocus" id="username" aria-describedby="helpId">
                         <span class="text-danger" id="usernameValidate"></span>
                     </div>
                     <div >
@@ -94,16 +94,16 @@
         
         $(document).ready(function(){
 
-          $("#username").focus()
+       //   $("#username").focus()
     
-            // $('#password').keydown(function(){
-            //   $('#pasValidate').text('');
-            // });
+            $('#password').keydown(function(){
+              $('#passwordValidate').text('');
+            });
 
             
-            // $('#UserName').keydown(function(){
-            //   $('#usnValidate').text('');
-            // });
+            $('#username').keydown(function(){
+              $('#usernameValidate').text('');
+            });
             
             // $('#signin').submit(function(e){
             //     e.preventDefault();

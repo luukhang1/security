@@ -21,13 +21,14 @@ function onSubmitSignUp(e){
     }  
     if(inputPassword > 0 && inputPassword.length < 8 ){
         passwordValidate.innerHTML = "Mật khẩu tối thiểu 8 kí tự"
-    } else {
+    } else if(inputUsername!= "" && inputPassword!="" && inputemailKH!="" ) {
         const article = {username: inputUsername, password: inputPassword, email: inputemailKH };
         axios.post('https://electric.ql6625.live/api/auth/signup', article)
             .then(response => {
                 console.log(response)
+                alert('Đăng kí thành công')
                 location.replace("signIn.html")
             })
-            .catch((e) => alert("Không thể đăng ký!"))
+            .catch((e) => alert(e.response.data.message))
     }    
 }

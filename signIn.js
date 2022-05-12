@@ -13,9 +13,9 @@ function onSubmitSignIn(e){
     if(inputPassword === ""){
         passwordValidate.innerHTML = "Không được để trống"
     } 
-    if(inputPassword > 0 && inputPassword.length < 8){
+    if(inputPassword.length > 0 && inputPassword.length < 8){
         passwordValidate.innerHTML = "Mật khẩu tối thiểu 8 kí tự"
-    } else {
+    } else if(inputUsername!="" && inputPassword!= "" ) {
         const article = {username: inputUsername, password: inputPassword };
         axios.post('https://electric.ql6625.live/api/auth/signin', article)
             .then(response => {
@@ -25,8 +25,12 @@ function onSubmitSignIn(e){
                 localStorage.setItem('accessToken', accessToken )
                 
             })
-            .then(() => location.replace("payInfo.html"))
-            .catch((e) => alert("Không thể đăng nhập!"))
+            .then(() => location.replace("index.html"))
+            .catch( function(e){
+
+                alert("Không thể đăng nhập!")
+                location.reload()
+            } )
     }
 }
 
