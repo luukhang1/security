@@ -11,7 +11,7 @@
    
     const headers = {
             'Content-Type': 'application/json',
-            'x-access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjUxNzcyMzQxLCJleHAiOjE2NTE4NTg3NDF9.nGuXS7CFmOJP7NjI9spmfcb5evLsgwVyN3eAPqDMU6Q'
+            'x-access-token': localStorage.getItem('accessToken')
         }
         
 

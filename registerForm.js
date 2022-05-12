@@ -144,7 +144,7 @@ function onSubmitForm(e){
 
         const headers = {
             'Content-Type': 'application/json',
-            'x-access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNjUwNjE3NjU1LCJleHAiOjE2NTA3MDQwNTV9.Z5dcqCN9DEYlsfBFlyilSR-shjLDqa8oe9ohyqg4HPw'
+            'x-access-token': localStorage.getItem('accessToken')
         }
         axios.post('https://electric.ql6625.live/api/electric/register', article, {headers})
             .then(response => {
